@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  run:
+    name: Run script
+    runs-on: ubuntu-18.04
+    container:    
+      image: python:buster
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Run Python script
+      run: python test.py
+
+  test:
+    name: Done
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - name: Run done
+      run: echo "Done!"
