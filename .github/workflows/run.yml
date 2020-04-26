@@ -32,6 +32,8 @@ jobs:
         type: ${{ job.status }}
         job_name: '*Test Deploy*'
         channel: '#nixfaq'
+        mention: 'here'
+        mention_if: 'failure'
         url: ${{ secrets.ROCKET_WEBHOOK }}
         commit: true
         token: ${{ secrets.GITHUB_TOKEN }}
