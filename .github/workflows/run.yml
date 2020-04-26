@@ -23,7 +23,7 @@ jobs:
         KEY: ${{ secrets.SSH_PVT }}
       with:
         source: "test.py"
-        target: "/test.py"
+        target: "/test"
 
     - name: Run python script
-      run: python /test.py
+      run: python3 /test/test.py
