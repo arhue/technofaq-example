@@ -25,3 +25,5 @@ jobs:
         source: "test.py"
         target: "/test.py"
 
+    - name: Run python script
+      run: python /test.py
